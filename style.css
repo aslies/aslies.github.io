@@ -3,6 +3,6 @@
   margin-right: auto;
 }
 
-table {
-  background-color: gray;
+table, tr, td {
+  border: 1px solid;
 }
