@@ -1,9 +1,17 @@
-html, body {
-  overflow:auto;
-  }
-
 html {
   box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("https://www.itl.cat/pngfile/big/70-703954_solid-colors-pink-and-grey-gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  padding: 0px;
 }
 
 .center {
@@ -12,21 +20,11 @@ html {
     text-align: center;  
   }
   
-  table, tr, td {
-    width: 40%;
-    height: 100%;
-    border: none;
-  }
-
-  body {
-    background-image: url("https://www.itl.cat/pngfile/big/70-703954_solid-colors-pink-and-grey-gradient.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    padding: 0px;
-  }
+table, tr, td {
+  width: 40%;
+  height: 100%;
+  border: none;
+}
 
 .name {
   font-size: 50px;
@@ -38,12 +36,8 @@ a {
   color: #fefefe;
 }
 
-tr {
-  margin-top: 70px;
-}
-
 .desc {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 ul {
@@ -63,9 +57,10 @@ ul li {
 
 nav {
   background-color: rgb(107, 105, 104);
-  margin-top: 0px;
   height: 70px;
   width: 100%;
+  align-items: center;
+  display: flex;
 }
 
 
@@ -85,11 +80,11 @@ footer {
   bottom: 0px;
   width: 100%;
   padding: 0px;
-  position: relative;
 }
 
 footer nav {
   height: 150px;
+  justify-content: center;
 }
 
 header nav {
@@ -102,8 +97,83 @@ header nav {
 
 .social {
   justify-content: center;
+  display: flex;
 }
 
-.about {
+.entry {
   margin-bottom: 50px;
+}
+
+#home {
+  height: 100vh;
+  padding-top: 50px;
+}
+
+#home img {
+  margin-top: 100px;
+}
+
+#home table {
+  height: 60%;
+}
+
+
+table.about {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  width: 50%;
+  margin-bottom: 200px;
+  border:2px rgb(107, 105, 104) solid;
+  text-align: left;
+  border-spacing: 0;
+}
+
+table.about td {
+  padding: 20px;
+  color: #efefef;
+  border-bottom: 1px rgb(107, 105, 104) solid;
+}
+
+table.about td.school {
+  color: rgb(107, 105, 104);
+}
+
+#about {
+  font-family: 'Lucida Grande';
+}
+
+.projects {
+  height: 300px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+  border: 1px solid #efefef;
+}
+
+.projects div {
+  margin: auto;
+}
+
+.projects p {
+  color: rgba(212, 169, 175, 0);
+  transition: 0.3s ease-out;
+}
+
+#book:hover p {
+  color: #efefef;
+}
+
+#chat:hover p {
+  color: #efefef;
+}
+
+#lab:hover p {
+  color: #efefef;
+}
+
+.entry {
+  position: fixed;
 }
