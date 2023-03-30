@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body> 
     <nav class="entry"><ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contacts">Contact</a></li>
+      <li><a href="#home" style="color: #efefef; text-decoration: none;">Home</a></li>
+      <li><a href="#about" style="color: #efefef; text-decoration: none;">About</a></li>
+      <li><a href="#contacts" style="color: #efefef; text-decoration: none;">Contact</a></li>
     </ul></nav>
     <div id="home"> <table class="center">
+      <h2 id="greet">Enter your name here --> </h2> 
+      <input type="text" id="input"/>
+      <button type="button" class="btn btn-primary" id="greetBtn" onclick="greet()">Enter</button> 
       <tr class="image">
        <td><img src="img/image.png" width="400" height="400"></td>
       </tr> 
@@ -37,17 +43,33 @@
       </table>
       <h1 style="font-weight: normal; color: #3E3C3C;">Projects</h1>
       <div class="projects">
-        <div id="book"><img src="img/book.png" width="200" height="200"/><p>Book Sale Automation System</p></div>
-        <div id="lab"><img src="img/lab.jpg" width="200" height="200"/><p>Laboratory Test Tracking System</p></div>
+        <div id="book"><img src="img/book.png" width="200" height="200"/><p>Book Sale Automation System</p>
+          <button type="button" class="btn btn-primary" onclick="download()">Download</button>  
+        </div>
+        <div id="lab"><img src="img/lab.jpg" width="200" height="200"/><p>Laboratory Test Tracking System</p>
+          <button type="button" class="btn btn-primary" onclick="download()">Download</button>  
+        </div>
       </div>
       </div>
     </div>
     <footer> 
-      <nav id="contacts"><ul class="social"><li><a href="https://www.linkedin.com/in/aslies/" target="_blank">LinkedIn
+      <nav id="contacts"><ul class="social"><li><a href="https://www.linkedin.com/in/aslies/" target="_blank" style="color: #efefef; text-decoration: none;">LinkedIn
       <i class="fa fa-linkedin-square"  style="font-size:32px"></i>
-   </a></li><li><a href="https://github.com/aslies" target="_blank">GitHub
+   </a></li><li><a href="https://github.com/aslies" target="_blank" style="color: #efefef; text-decoration: none;">GitHub
     <i class="fa fa-github-square"  style="font-size:32px"></i>
   </a></li></ul></nav>
     </footer>
+    <script>
+      function download() {
+        alert("Downloading project files");
+      }
+      function greet() {
+        var element = document.getElementById("input");
+        document.getElementById("greet").innerHTML = "Welcome to my website, " + element.value + "!";
+        document.getElementById("input").style.visibility = 'hidden';
+        document.getElementById("greetBtn").style.visibility = 'hidden';
+      }
+    
+    </script>
   </body>
 </html>
