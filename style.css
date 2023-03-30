@@ -106,7 +106,7 @@ header nav {
 
 #home {
   height: 100vh;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 #home img {
@@ -166,10 +166,38 @@ table.about td.school {
   color: #efefef;
 }
 
+#chat:hover p {
+  color: #efefef;
+}
+
 #lab:hover p {
   color: #efefef;
 }
 
 .entry {
   position: fixed;
+}
+
+#book img {
+  margin-bottom: 10px;
+}
+
+#lab img {
+  margin-bottom: 10px;
+}
+
+.entry a {
+  text-decoration: none;
+}
+
+#greet {
+  display: inline;
+}
+
+#greetBtn {
+  margin-left: 5px;
+}
+
+#input {
+  border-radius: 7px;
 }
