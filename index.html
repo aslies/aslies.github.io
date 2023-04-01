@@ -4,7 +4,7 @@
     <title>Aslı Eş</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -17,13 +17,11 @@
       <li><a href="#contacts" style="color: #efefef; text-decoration: none;">Contact</a></li>
     </ul></nav>
     <div id="home"> <table class="center">
-      <h2 id="greet">Enter your name here --> </h2> 
-      <input type="text" id="input"/>
-      <button type="button" class="btn btn-primary" id="greetBtn" onclick="greet()">Enter</button> 
       <tr class="image">
        <td><img src="img/image.png" width="400" height="400"></td>
       </tr> 
       <tr class="center desc"><td style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: italic;">CE Student at Marmara University</td></tr>
+      <tr><td style="font-size: 18px;"id="greet"></td></tr>
     </table> </div>
     <div id="about" class="center">
       <p class="center" style="font-size: 32px; color: #3E3C3C;">Education</p>
@@ -44,10 +42,10 @@
       <h1 style="font-weight: normal; color: #3E3C3C;">Projects</h1>
       <div class="projects">
         <div id="book"><img src="img/book.png" width="200" height="200"/><p>Book Sale Automation System</p>
-          <button type="button" class="btn btn-primary" onclick="download()">Download</button>  
+          <button type="button" class="btn btn-primary" id="download1" onclick="download()">Download</button>  
         </div>
         <div id="lab"><img src="img/lab.jpg" width="200" height="200"/><p>Laboratory Test Tracking System</p>
-          <button type="button" class="btn btn-primary" onclick="download()">Download</button>  
+          <button type="button" class="btn btn-primary" id="download2" onclick="download()">Download</button>  
         </div>
       </div>
       </div>
@@ -63,13 +61,21 @@
       function download() {
         alert("Downloading project files");
       }
-      function greet() {
-        var element = document.getElementById("input");
-        document.getElementById("greet").innerHTML = "Welcome to my website, " + element.value + "!";
-        document.getElementById("input").style.visibility = 'hidden';
-        document.getElementById("greetBtn").style.visibility = 'hidden';
+
+      var i = 0;
+      var txt = 'Welcome to my website';
+      var speed = 50;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("greet").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+         }
       }
-    
+
+      window.addEventListener("load", typeWriter)
+
     </script>
   </body>
 </html>
