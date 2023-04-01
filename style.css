@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -186,18 +188,9 @@ table.about td.school {
   margin-bottom: 10px;
 }
 
-.entry a {
-  text-decoration: none;
-}
-
 #greet {
   display: inline;
-}
-
-#greetBtn {
-  margin-left: 5px;
-}
-
-#input {
-  border-radius: 7px;
+  font-family: "Montserrat";
+  padding-left: 20px;
+  padding-top: 30px;
 }
