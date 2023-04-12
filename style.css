@@ -62,7 +62,9 @@ nav {
   height: 70px;
   width: 100%;
   align-items: center;
+  justify-content: center;
   display: flex;
+  z-index: 1;
 }
 
 
@@ -107,7 +109,7 @@ header nav {
 }
 
 #home {
-  height: 100vh;
+  height: 800px;
   padding-top: 70px;
 }
 
@@ -193,4 +195,200 @@ table.about td.school {
   font-family: "Montserrat";
   padding-left: 20px;
   padding-top: 30px;
+}
+
+a img {
+  border: none;
+}
+
+.caption {
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+}
+
+.caption img {
+	display: block;
+	max-width: 100%;
+}
+
+.caption::before,
+.caption::after {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	padding: 20px;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.caption::before {
+	content: attr(data-title);
+	top: 0;
+	height: 30%;
+	background: #a21f00;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.caption::after {
+	content: '\201C' attr(data-description) '\201D';
+	top: 30%;
+	height: 70%;
+	background: #db2e00;
+	font-size: 16px;
+	text-align: right;
+}
+
+.caption:hover::before,
+.caption:hover::after {
+	opacity: 1;
+}
+
+/* Show on hover (animate opacity) */
+.caption-2::before,
+.caption-2::after {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	padding: 20px;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.caption-2::before {
+	content: attr(data-title);
+	top: 0;
+  left: 0;
+	height: 30%;
+	background: #a21f00;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.caption-2::after {
+	content: '\201C' attr(data-description) '\201D';
+	top: 30%;
+  left: 0;
+	height: 66%;
+	background: #db2e00;
+	font-size: 16px;
+	text-align: right;
+}
+
+.caption-2:hover::before,
+.caption-2:hover::after {
+	opacity: 1;
+}
+
+.btn {
+	border: 1px solid #fff;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+  margin-top: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-1c:after {
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+.btn-1c:hover,
+.btn-1c:active {
+	color: #0e83cd;
+}
+
+.btn-1c:hover:after,
+.btn-1c:active:after {
+	width: 100%;
+}
+
+
+#contacts li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+#contacts li a {
+  position: relative; 
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: .1s;
+}
+
+#contacts li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+#contacts li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff2810;
+}
+
+#contacts li a:hover {
+  color: #ff2810;
+  box-shadow: 0 0 5px #ff2810;
+  text-shadow: 0 0 5px #ff2810;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects {
+    height: 600px;
+    flex-direction: column;
+  }
+  
+  nav.entry {
+    display: flex;
+  }
+
+  nav.entry ul {
+    margin-bottom: 0;
+  }
 }
