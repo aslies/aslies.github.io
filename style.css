@@ -123,13 +123,31 @@ header nav {
   height: 60%;
 }
 
+.desc p {
+  width: 40%;
+  position: relative;
+  left: 200px;
+  bottom: 50px;
+}
+
+.education {
+  width: 80%;
+  position: relative;
+  right: 300px;
+}
+
+.education p {
+  margin-left: 100px;
+}
 
 table.about {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 20px;
-  width: 50%;
+  width: 100%;
   margin-bottom: 200px;
-  border:2px rgb(107, 105, 104) solid;
+  margin-left: 80px;
+  border: none;
+  border-bottom:1px rgb(107, 105, 104) solid;
   text-align: left;
   border-spacing: 0;
 }
@@ -146,6 +164,221 @@ table.about td.school {
 
 #about {
   font-family: 'Lucida Grande';
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+
+#skills {
+  padding: 20px 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.container {
+  margin: 50px;
+  padding: 0;
+  max-width: 250px;
+  text-align: center;
+}
+
+.container h3 {
+  text-align: left;
+}
+
+.html {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.html-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.html-moved .html-bar { 
+  width: 70%;
+  background-color: #efefef;  
+  animation: htmlAnimation 3s;
+}
+
+@keyframes htmlAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 70%; background-color: #efefef; }
+}
+
+
+.css {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.css-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.css-moved .css-bar { 
+  width: 70%;
+  background-color: #efefef;  
+  animation: cssAnimation 3s;
+}
+
+@keyframes cssAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 70%; background-color: #efefef; }
+}
+
+.js {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.js-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.js-moved .js-bar { 
+  width: 35%;
+  background-color: #efefef;  
+  animation: jsAnimation 3s;
+}
+
+@keyframes jsAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 35%; background-color: #efefef; }
+}
+
+
+.java {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.java-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.java-moved .java-bar { 
+  width: 70%;
+  background-color: #efefef;  
+  animation: javaAnimation 3s;
+}
+
+@keyframes javaAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 70%; background-color: #efefef; }
+}
+
+.c {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.c-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.c-moved .c-bar { 
+  width: 65%;
+  background-color: #efefef;  
+  animation: cAnimation 3s;
+}
+
+@keyframes cAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 65%; background-color: #efefef; }
+}
+
+.python {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.python-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.python-moved .python-bar { 
+  width: 50%;
+  background-color: #efefef;  
+  animation: pythonAnimation 3s;
+}
+
+@keyframes pythonAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 50%; background-color: #efefef; }
+}
+
+.sql {
+  padding: 2px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);  
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.sql-bar {
+  height: 9px;
+  border-radius: 30px;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.1s linear;  
+  transition-property: width, background-color;    
+}
+
+.sql-moved .sql-bar { 
+  width: 60%;
+  background-color: #efefef;  
+  animation: sqlAnimation 3s;
+}
+
+@keyframes sqlAnimation {
+  0%   { width: 0%; background-color: #efefef;}
+  100% { width: 60%; background-color: #efefef; }
 }
 
 .projects {
@@ -287,55 +520,6 @@ a img {
 	opacity: 1;
 }
 
-.btn {
-	border: 1px solid #fff;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
-  margin-top: 0;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn-1c:after {
-	width: 0%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #fff;
-}
-
-.btn-1c:hover,
-.btn-1c:active {
-	color: #0e83cd;
-}
-
-.btn-1c:hover:after,
-.btn-1c:active:after {
-	width: 100%;
-}
-
-
 #contacts li {
   list-style: none;
   margin: 0 15px;
@@ -384,22 +568,75 @@ a img {
   margin: 50px;
 }
 
-.wrapper {
-  display: grid;
-  padding-top: 100px;
-  grid-template-columns: 200px 200px 200px 200px 200px;
-  row-gap: 20px;
-}
-
-.wrapper img {
+#wrapper img {
   width: 100px;
   height: 100px;
   cursor: pointer;
-  
 }
 
-.wrapper a {
+#wrapper a {
   margin: auto;
+}
+
+#contact {
+  width: 70%;
+}
+
+form .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+form i {
+  margin-top: 10px;
+}
+
+form {
+  padding: 20px;
+  padding-right: 0;
+  margin-bottom: 50px;
+}
+
+form a.btn {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+}
+
+form textarea[type=text]::placeholder, input[type=text]::placeholder, input[type=email]::placeholder {
+  color: gray;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea[type=text]:focus {
+  box-shadow: none;
+  border-bottom: 2px solid cornflowerblue;
+}
+
+form input[type=text], input[type=email], textarea[type=text] {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid gray;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.row .col-md-4  {
+  padding-left: 0;
+}
+
+.row .col-md-8 {
+  padding-right: 0;
+}
+
+.list-unstyles {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 600px) {
