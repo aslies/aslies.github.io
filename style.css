@@ -482,7 +482,6 @@ a img {
 	opacity: 1;
 }
 
-/* Show on hover (animate opacity) */
 .caption-2::before,
 .caption-2::after {
 	opacity: 0;
