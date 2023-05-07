@@ -482,6 +482,7 @@ a img {
 	opacity: 1;
 }
 
+
 .caption-2::before,
 .caption-2::after {
 	opacity: 0;
@@ -638,7 +639,7 @@ form input[type=text], input[type=email], textarea[type=text] {
   flex-direction: column;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .projects {
     height: 600px;
     flex-direction: column;
@@ -648,7 +649,22 @@ form input[type=text], input[type=email], textarea[type=text] {
     display: flex;
   }
 
+  
+  nav.entry a {
+    font-size: 14px;
+  }
+
   nav.entry ul {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .education {
+    margin-left: 400px;
   }
 }
