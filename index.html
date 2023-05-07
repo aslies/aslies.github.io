@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body> 
     <nav class="entry"><ul>
       <li><a href="#home" style="color: #efefef; text-decoration: none;">Home</a></li>
       <li><a href="#about" style="color: #efefef; text-decoration: none;">About</a></li>
+      <li><a href="#skills" style="color: #efefef; text-decoration: none;">Skills</a></li>
       <li><a href="projects.html" style="color: #efefef; text-decoration: none;">Projects (BS)</a></li>
       <li><a href="game.html" style="color: #efefef; text-decoration: none;">Game</a></li>
-      <li><a href="#contacts" style="color: #efefef; text-decoration: none;">Contact</a></li>
+      <li><a href="#contact" style="color: #efefef; text-decoration: none;">Contact</a></li>
     </ul></nav>
     <div id="home"> <table class="center">
       <tr class="image">
@@ -31,7 +33,11 @@
       <tr><td style="font-size: 18px;"id="greet"></td></tr>
     </table> </div>
     <div id="about" class="center">
-      <p class="center" style="font-size: 32px; color: #3E3C3C;">Education</p>
+      <div class="desc">
+        <p style="font-size: 24px;">Highly motivated computer engineering student with a great passion for technology. Interested in web development.</p>
+      </div>
+      <div class="education">
+      <p style="font-size: 32px; color: #3E3C3C;">Education</p>
       <table class="center about">
         <tr>
           <td>2014-2017</td>
@@ -46,17 +52,92 @@
           <td class="school" style="border-bottom: none;">Marmara University</td>
         </tr>
       </table>
-      <!-- <h1 style="font-weight: normal; color: #3E3C3C;">Projects</h1>
-      <div class="projects">
-        <div id="book"><a class="caption caption-2" data-title="" data-description="Book Sale Automation System"><img src="img/book.png" width="200" height="200"></a><p></p>
-          <button type="button" class="btn btn-1 btn-1c" id="download1" onclick="download()">Download</button>  
-        </div>
-        <div id="lab"><a class="caption caption-2" data-title="" data-description="Laboratory Test Tracking System"><img src="img/lab.jpg" width="200" height="200"></a><p></p>
-          <button type="button" class="btn btn-1 btn-1c" id="download2" onclick="download()">Download</button>  
-        </div>
-      </div> -->
       </div>
-    </div>
+      </div>
+      <div id="skills">
+
+        <div class="col">
+          <div class="container"><h3>HTML</h3>
+            <div class="html html-moved">
+              <div class="html-bar">
+              </div>                       
+            </div> 
+          </div>
+
+          <div class="container"><h3>CSS</h3>
+            <div class="css css-moved">
+              <div class="css-bar">
+              </div>                       
+            </div> 
+          </div>
+
+          <div class="container"><h3>JavaScript</h3>
+            <div class="js js-moved">
+              <div class="js-bar">
+              </div>                       
+            </div> 
+          </div>
+        </div>
+          
+
+        <div class="col">
+          <div class="container"><h3>Java</h3>
+            <div class="java java-moved">
+              <div class="java-bar">
+              </div>                       
+            </div> 
+          </div>
+
+          <div class="container"><h3>C</h3>
+            <div class="c c-moved">
+              <div class="c-bar">
+              </div>                       
+            </div> 
+          </div>
+
+          <div class="container"><h3>Python</h3>
+            <div class="python python-moved">
+              <div class="python-bar">
+              </div>                       
+            </div> 
+          </div> 
+        </div>
+        
+        <div class="col">
+          <div class="container"><h3>SQL</h3>
+            <div class="sql sql-moved">
+              <div class="sql-bar">
+              </div>                       
+            </div> 
+          </div>     
+        </div>
+      </div>
+
+      <div id="contact" class="center">
+      <h2>Contact me</h2>
+      <form>
+        <div class="row">
+          <div class="col-md-8"><input type="text" class="form-control no-border" placeholder="Your name"/></div>
+          <div class="col-md-4"><i class="fas fa-map-marker-alt fa-2x"></i>
+            <p>34912, Pendik/Istanbul, Turkey</p></div>  
+        </div>
+        <div class="row">
+          <div class="col-md-8"><input type="email" class="form-control no-border" placeholder="Your e-mail"/></div>
+          <div class="col-md-4"><i class="fas fa-phone fa-2x"></i>
+            <p>(+90) 544 288 02 61</p></div>  
+        </div>
+        <div class="row">
+          <div class="col-md-8"><textarea type="text" class="form-control no-border" placeholder="Your message"></textarea></div>
+          <div class="col-md-4"><i class="fas fa-envelope fa-2x"></i>
+            <p>aslies.2645@gmail.com</p></div>  
+        </div>
+        <div class="row">
+          <div class="text-center text-md-left">
+            <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+        </div>
+        </div>
+      </form>
+      </div>
     <footer> 
       <nav id="contacts"><ul class="social"><li><a href="https://www.linkedin.com/in/aslies/" target="_blank" style="color: #efefef; text-decoration: none;">
       <i class="fab fa-linkedin"  style="font-size:32px"></i>
@@ -65,10 +146,6 @@
   </a></li></ul></nav>
     </footer>
     <script>
-      function download() {
-        alert("Downloading project files");
-      }
-
       var i = 0;
       var txt = 'Welcome to my website';
       var speed = 50;
@@ -86,5 +163,3 @@
     </script>
   </body>
 </html>
-
-
